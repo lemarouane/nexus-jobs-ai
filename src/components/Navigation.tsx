@@ -49,6 +49,14 @@ const Navigation = () => {
             >
               Dashboard
             </Link>
+            <Link
+              to="/profile"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/profile") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Profile
+            </Link>
           </div>
 
           {/* Auth Buttons */}
@@ -104,6 +112,15 @@ const Navigation = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Dashboard
+              </Link>
+              <Link
+                to="/profile"
+                className={`text-sm font-medium ${
+                  isActive("/profile") ? "text-primary" : "text-muted-foreground"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Profile
               </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Link to="/login" onClick={() => setIsMenuOpen(false)}>
